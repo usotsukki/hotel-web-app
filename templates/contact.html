@@ -1,0 +1,38 @@
+{% extends "layout.html" %} {% block title %} Contact {% endblock %} {% block main %}
+<div class="container-fluid">
+    <div class="main-font">
+
+        <section style="color: #F2F2F2">
+
+            <div style="width: 100%;  height: 70px"></div>
+            <h1>Contact Us</h1>
+            <div style="width: 100%;  height: 20px"></div>
+            <p class=" par ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus assumenda, culpa dolore omnis ipsum blanditiis eveniet nulla aliquid nihil impedit.</p>
+        </section>
+    </div>
+
+    <div class="form-bg">
+        <form class="form-body" action="/contact-us" method="POST">
+            <div class="form-line">
+                <input class="form-input-text" type="text" name="name" placeholder="Your name">
+            </div>
+            <div class="form-line">
+                <input class="form-input-text" type="text" name="rooms" placeholder="Room category">
+            </div>
+            <div class="form-line">
+                <input class="form-input-text" type="text" name="dates" placeholder="Dates">
+            </div>
+            <div class="form-line">
+                <input class="form-input-text" type="text" name="contacts" placeholder="Phone number">
+            </div>
+            <div class="form-line-big">
+                <textarea name="text" id="" class="area-txt" placeholder="Commentary"></textarea>
+            </div>
+            <div class="form-btn">
+                <button action class="btn form-btn-inner" type="submit">Check</button>
+            </div>
+        </form>
+        <div style="height: 200px; width: 100%;"></div>
+    </div>
+</div>
+{% endblock %}

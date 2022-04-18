@@ -1,0 +1,87 @@
+{% extends "layout.html" %} {% block title %} Contact {% endblock %} {% block main %}
+
+<div class="has-carousel"></div>
+<div class="header-spacer"></div>
+<div class="room-catalog">
+    <div class="seventyq">
+        <div class="carousel-container">
+            <div class="carousel-button-bs">
+                <i class="fa-solid fa-chevron-right BtnNext" id="BtnNext"></i>
+            </div>
+            <div class="carousel-button-bs">
+                <i class="fa-solid fa-chevron-left BtnPrev" id="BtnPrev"></i>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-slide-img" id="last-im-copy">
+                    <img class="img-fluid" src="/static/imgs/more2.jpg" alt="">
+                </div>
+                <div class="carousel-slide-img">
+                    <img class="img-fluid" src="/static/imgs/2mv.jpeg" alt="">
+                </div>
+                <div class="carousel-slide-img">
+                    <img class="img-fluid" src="/static/imgs/more1.jpg" alt="">
+                </div>
+                <div class="carousel-slide-img">
+                    <img class="img-fluid" src="/static/imgs/more3.jpg" alt="">
+                </div>
+                <div class="carousel-slide-img">
+                    <img class="img-fluid" src="/static/imgs/more2.jpg" alt="">
+                </div>
+                <div class="carousel-slide-img" id="first-im-copy">
+                    <img class="img-fluid" src="/static/imgs/2mv.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thirtyq">
+
+        <ul>
+            <div>
+                <i class="fa-solid fa-chevron-right next-room-btn" id="next-room-btn"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-chevron-left prev-room-btn" id="prev-room-btn"></i>
+            </div>
+            <li class="room-type" id="last-room-copy">
+                <a href="/rooms-v2/apartment">
+                            Apartment
+                        </a>
+            </li>
+            <li class="room-type">
+                <a href="/rooms-v2/double-superior">
+                            Double Superior
+                        </a>
+            </li>
+            <li class="room-type">
+                <a href="/rooms-v2/double-big">
+                            Big Double
+                        </a>
+            </li>
+            <li class="room-type">
+                <a href="/rooms-v2/double">
+                            Standart                        
+                        </a>
+            </li>
+            <li class="room-type">
+                <a href="/rooms-v2/triple">
+                            Triple
+                        </a>
+            </li>
+            <li class="room-type">
+                <a href="/rooms-v2/apartment">
+                            Apartment
+                        </a>
+            </li>
+            <li class="room-type" id="first-room-copy">
+                <a href="/rooms-v2/double-superior">
+                            Double Superior
+                        </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+</div>
+{% endblock %}
