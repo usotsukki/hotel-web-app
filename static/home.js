@@ -1,48 +1,19 @@
+import { getLoco, getLocoRooms } from "./utils.js";
+
 history.scrollRestoration = "manual";
 window.onload = function () {
 	window.scrollTo(0, 0);
 };
 
-// MOBILE NAV BAR + BUTTON
 const currentPath = window.location.pathname;
+const tabs = document.querySelectorAll(".active");
 
-function getloco() {
-	tabs = document.querySelectorAll(".active");
-
-	tabs.forEach((tab) => {
-		var name = tab.firstElementChild.getAttribute("href");
-		if (currentPath === name) {
-			tab.classList.add("navnav");
-			return;
-		}
-		if (currentPath.includes(name + "/")) {
-			tab.classList.add("navnav");
-			return;
-		}
-	});
-}
-window.onload = getloco();
-
-function getLocoRooms() {
-	rooms = document.querySelectorAll(".room-type");
-
-	rooms.forEach((room) => {
-		var name = room.firstElementChild.getAttribute("href");
-		if (currentPath === name) {
-			console.log(name);
-			room.classList.add("roomnav");
-			return;
-		}
-		if (currentPath.includes(name + "/")) {
-			room.classList.add("roomnav");
-			return;
-		}
-	});
-}
+window.onload = getLoco(tabs, currentPath);
 if (tabs) {
-	window.onload = getLocoRooms();
+	window.onload = getLocoRooms(currentPath);
 }
 
+// MOBILE NAV BAR + BUTTON
 const menuBtn = document.querySelector(".ham-button");
 let menuOpen = false;
 menuBtn.addEventListener("click", () => {
@@ -296,26 +267,6 @@ function homeBookingAnimation() {
 	var height = document.querySelector(".home-slideshow").offsetHeight;
 	var headerWidth = document.querySelector("header").offsetWidth;
 	var homeBookingBtnwidth = document.querySelector(".home-booking").offsetWidth;
-	var roomsImgWidth = document.querySelector(".home-rooms-img").offsetWidth;
-	var roomsImgHeight = document.querySelector(".home-rooms-img").offsetHeight;
-	var roomsLogoHeight = document.querySelector(".home-rooms-font").offsetHeight;
-	var blockWidth = document.querySelector(".rooms-txt-block").offsetWidth;
-	var blockHeight = document.querySelector(".rooms-txt-block").offsetHeight;
-	var cHeight = blockHeight;
-	var difH = roomsImgHeight - cHeight;
-	console.log(difH);
-	var roomsDestinationY = (height - roomsImgHeight) / 2;
-	var roomsDestinationX = headerWidth - roomsImgWidth - headerWidth * 0.1;
-	var roomsTxtWidth = document.querySelector(".home-rooms-font").offsetWidth;
-	var roomsXMinus =
-		headerWidth - roomsTxtWidth / 2 - roomsTxtWidth - convertRemToPixels(10);
-	var finalRoomTxtY = roomsDestinationY + difH * 0.5;
-	var finalRoomTxtX = convertRemToPixels(7);
-	var centerRoomsTxt = (headerWidth - roomsTxtWidth) / 2;
-	var blockDestinationX = headerWidth * 0.1;
-	var blockDestinationY = roomsDestinationY + difH / 2;
-
-	console.log(roomsDestinationY);
 
 	gsap.defaultEase = Linear.easeNone;
 
