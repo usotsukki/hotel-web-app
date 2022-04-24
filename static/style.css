@@ -664,6 +664,10 @@ section > p {
 	height: calc(100vh - 70px);
 	background: rgba(000, 000, 000, 0.7);
 }
+.booking-area input {
+	color: #070e13;
+	text-align: center;
+}
 
 @media (max-width: 35rem) {
 	.booking-btn {
