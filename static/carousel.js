@@ -31,6 +31,8 @@ export function carouselBox() {
 		counter--;
 		CarouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 	});
+
+	// on complete transition
 	CarouselSlide.addEventListener("transitionend", () => {
 		if (CarouselSlideImgs[counter].id === "last-im-copy") {
 			CarouselSlide.style.transition = "none";
