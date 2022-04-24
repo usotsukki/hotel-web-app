@@ -10,13 +10,14 @@ window.onload = () => {
 	window.scrollTo(0, 0);
 	getLoco(tabs, currentPath);
 	toggleBtns(currentPath);
-	if (tabs) getLocoRooms();
+	if (tabs) getLocoRooms(currentPath);
 	if (document.querySelector(".has-carousel")) carouselBox();
 	if (document.querySelector(".has-animation-hb")) {
 		if (window.innerWidth > window.innerHeight) homeBookingAnimation();
 		else {
-			document.querySelector(".intro").style.opacity = 0;
-			document.querySelector(".intro-tail").style.opacity = 0;
+			document.querySelector(".home-booking").style.display = "none";
+			document.querySelector(".intro").style.display = "none";
+			document.querySelector(".intro-tail").style.display = "none";
 		}
 	}
 };

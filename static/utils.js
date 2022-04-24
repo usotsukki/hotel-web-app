@@ -14,9 +14,8 @@ function getLoco(tabs, currentPath) {
 function getLocoRooms(currentPath) {
 	const rooms = document.querySelectorAll(".room-type");
 	rooms.forEach((room) => {
-		var name = room.firstElementChild.getAttribute("href");
+		const name = room.firstElementChild.getAttribute("href");
 		if (currentPath === name) {
-			console.log(name);
 			room.classList.add("roomnav");
 			return;
 		}

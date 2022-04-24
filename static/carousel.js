@@ -33,7 +33,7 @@ export function carouselBox() {
 	});
 
 	// on complete transition
-	CarouselSlide.addEventListener("transitionend", () => {
+	CarouselSlide.addEventListener("transitioned", () => {
 		if (CarouselSlideImgs[counter].id === "last-im-copy") {
 			CarouselSlide.style.transition = "none";
 			counter = CarouselSlideImgs.length - 2;
