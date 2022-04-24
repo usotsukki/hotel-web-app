@@ -314,7 +314,6 @@ section {
 
 @media (max-width: 35rem) {
 	.card {
-		margin: auto;
 		margin-bottom: 2rem;
 	}
 }
