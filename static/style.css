@@ -304,9 +304,12 @@ section {
 }
 
 .card {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 	height: auto;
 	width: 90%;
-	margin: 4vh;
+	margin: 2vh 0 2vh 0;
 }
 
 @media (max-width: 35rem) {
@@ -355,6 +358,8 @@ section {
 }
 
 .row {
+	margin: 0;
+	display: flex;
 	justify-content: center;
 }
 
