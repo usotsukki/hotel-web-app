@@ -71,7 +71,7 @@ def location():
 
 @app.route('/rooms-v2/double-superior')
 def ds_room():
-    return render_template('double-superior.html')
+    return render_template('rooms-v2.html')
 
 
 @app.route('/rooms-v2/double-big')
@@ -96,6 +96,7 @@ def ap_room():
 
 @app.route('/contact-us', methods=["GET", "POST"])
 def contact():
+    return index()
     if request.method == "POST":
         rooms = request.form.get('rooms')
 
